@@ -1,0 +1,63 @@
+.vehicle-father {
+  display: flex;
+  justify-content: center;
+}
+.vehicle-container {
+  padding: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vehicle-container h1 {
+  margin-bottom: 3rem;
+}
+
+.vehicle-form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.vehicle-form__input {
+  border: none;
+  background-color: #383838;
+  border-radius: 5px;
+  height: 40px;
+  margin: 5px;
+  padding: 0 10px;
+}
+
+.vehicle-form div {
+  display: flex;
+  width: 100%;
+}
+
+.width70 {
+  flex: 0 0 70%;
+}
+.width-remaining {
+  flex: 1;
+}
+
+.button {
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border 0.5s ease-in-out;
+}
+
+.button:hover {
+  border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+  .vehicle-form {
+    width: 90%;
+  }
+  .vehicle-form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

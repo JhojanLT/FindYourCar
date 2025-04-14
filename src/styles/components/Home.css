@@ -1,0 +1,37 @@
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #383838;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    padding: 2rem;
+  }
+}
+
+.hero-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 15rem;
+  padding: 0 3rem;
+}
+.subtitle-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 475px) {
+  h1 {
+    padding-bottom: 1rem;
+  }
+  .subtitle-container {
+    justify-content: flex-start;
+  }
+}
