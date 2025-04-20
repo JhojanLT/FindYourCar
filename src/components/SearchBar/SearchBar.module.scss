@@ -1,0 +1,88 @@
+// Variables para valores reutilizables
+$background-dark: #383838;
+$border-radius: 5px;
+$input-height: 40px;
+$spacing: 5px;
+$padding-container: 5rem;
+$margin-title: 3rem;
+$form-width: 70%;
+$form-width-mobile: 90%;
+
+// Contenedor principal
+.vehicleFather {
+  display: flex;
+  justify-content: center;
+}
+
+// Contenedor del formulario
+.vehicleContainer {
+  padding: $padding-container;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin-bottom: $margin-title;
+  }
+}
+
+// Formulario
+.vehicleForm {
+  display: flex;
+  flex-direction: column;
+  width: $form-width;
+
+  // Input genérico (incluye select y button)
+  .vehicleInput {
+    border: none;
+    background-color: $background-dark;
+    border-radius: $border-radius;
+    height: $input-height;
+    margin: $spacing;
+    padding: 0 $spacing;
+
+    // Asegura que select sea estilizable
+    &[type="submit"],
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+
+  // Grupo de inputs
+  .vehicleGroup {
+    display: flex;
+    width: 100%;
+  }
+
+  // Clases utilitarias para ancho
+  .width30 {
+    flex: 0 0 30%;
+  }
+
+  .widthRemaining {
+    flex: 1;
+  }
+
+  // Estilos para el botón
+  .vehicleButton {
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: border 0.5s ease-in-out;
+
+    &:hover {
+      border: 1px solid white;
+    }
+  }
+
+  // Media query para responsividad
+  @media (max-width: 768px) {
+    width: $form-width-mobile;
+
+    .vehicleGroup {
+      flex-direction: column;
+    }
+  }
+}

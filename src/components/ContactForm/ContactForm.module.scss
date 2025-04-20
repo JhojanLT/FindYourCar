@@ -1,0 +1,64 @@
+// Variables para colores y reusar valores
+$background-dark: #383838;
+$background-light: #ffffff;
+$background-hover: #dddddd;
+$border-radius: 5px;
+$input-height: 40px;
+$textarea-height: 100px;
+$spacing: 10px;
+
+.contactFather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.contactContainerForm {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactInput {
+  background-color: $background-dark;
+  border: none;
+  border-radius: $border-radius;
+  color: white;
+  height: $input-height;
+  margin: $spacing 0;
+  padding: 0 $spacing;
+
+  // Estilo para textarea
+  &.contactTextarea {
+    height: $textarea-height;
+    resize: none;
+    padding: $spacing;
+  }
+}
+
+.contactButton {
+  background-color: $background-light;
+  color: $background-dark;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+  height: $input-height;
+  margin-top: $spacing;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $background-hover;
+  }
+}
