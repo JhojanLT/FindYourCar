@@ -3,6 +3,12 @@ import { useState } from "react";
 import { VehicleCard } from "./../VehicleCard/VehicleCard";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { sampleVehicles } from "../../data/cars";
+import { VehicleDetails } from "../VehicleDetails/VehicleDetails";
+
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
 
 import styles from "./Home.module.scss";
 
@@ -29,6 +35,17 @@ function Home() {
     setFilters((prev) => ({ ...prev, [name]: name === "priceRangeIndex" ? parseInt(value) : value }));
   };
 
+  const resetFilters = () => {
+    setFilters({
+      brand: "",
+      year: "",
+      fuelType: "",
+      priceRangeIndex: "",
+    });
+
+    console.log("Filtros limpios");
+  };
+
   const priceRanges = [
     { label: "Todos", min: 0, max: Infinity }, // Nuevo primer rango
 
@@ -51,6 +68,18 @@ function Home() {
     );
   });
 
+  const [selectedVehicle, setSelectedVehicle] = useState(null);
+
+  //Setea el valor del estado con el valor del vehiculo seleccionado al hacer click
+  const handleVehicleClick = (vehicle) => {
+    setSelectedVehicle(vehicle);
+  };
+
+  //Setea el valor del vehiculo a null, lo cual hará en la logica que se cierre el componente modal
+  const handleClose = () => {
+    setSelectedVehicle(null);
+  };
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.heroContainer}>
@@ -66,12 +95,23 @@ function Home() {
         priceRanges={priceRanges}
         filters={filters}
         aplyFilter={filterHandleChange}
+        resetFilters={resetFilters}
       />
       <div className={styles.cardContainer}>
         {filteredVehicles.map((vehicle) => {
-          return <VehicleCard key={vehicle.id} {...vehicle} />;
+          return (
+            <VehicleCard
+              key={vehicle.id}
+              onClick={() => {
+                handleVehicleClick(vehicle);
+                console.log("vehiculo actual", vehicle);
+              }}
+              {...vehicle}
+            />
+          );
         })}
       </div>
+      {selectedVehicle && <VehicleDetails vehicle={selectedVehicle} onClose={handleClose} />}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import styles from "./SearchBar.module.scss";
 
 import clsx from "clsx";
 
-function SearchBar({ brands, years, fuelType, priceRanges, filters, aplyFilter }) {
+function SearchBar({ brands, years, fuelType, priceRanges, filters, aplyFilter, resetFilters }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Datos de búsqueda:", filters);
@@ -79,8 +79,12 @@ function SearchBar({ brands, years, fuelType, priceRanges, filters, aplyFilter }
                 </option>
               ))}
             </select>
-            <button className={clsx(styles.vehicleInput, styles.width30, styles.vehicleButton)} type="submit">
-              Buscar
+            <button
+              className={clsx(styles.vehicleInput, styles.width30, styles.vehicleButton)}
+              onClick={resetFilters}
+              type="button"
+            >
+              Limpiar
             </button>
           </div>
         </form>

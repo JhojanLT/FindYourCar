@@ -1,18 +1,10 @@
 import React from "react";
+// import { useState } from "react";
 import styles from "./VehicleCard.module.scss";
 
-const VehicleCard = ({
-  brand,
-  model,
-  year,
-  price,
-  image,
-  fuelType,
-  transmission,
-  km,
-}) => {
+const VehicleCard = ({ brand, model, year, price, image, fuelType, transmission, km, onClick }) => {
   return (
-    <div className={styles.vehicleCard}>
+    <div className={styles.vehicleCard} onClick={onClick}>
       <div className={styles.cardImage}>
         <img src={image} alt={`${brand} ${model}`} />
       </div>
