@@ -1,0 +1,24 @@
+# Ignorar node_modules porque se reconstruyen en el contenedor o no se necesitan
+node_modules
+
+# Ignorar el sistema de control de versiones
+.git
+.gitignore
+
+# Archivos de construcción que ya no son necesarios para construir otra vez
+build
+
+# Configuraciones locales
+.env
+*.env
+
+# Archivos de configuración que no afectan el build
+Dockerfile
+docker-compose.yml
+README.md
+.vscode
+.idea
+
+# Sistemas de OS
+.DS_Store
+Thumbs.db
