@@ -15,13 +15,26 @@
   color: #000;
   background-color: white;
   border-radius: 10px;
-  width: 40%;
-  height: 70%;
+  width: 50%;
+  height: 80%;
   overflow: hidden;
 
   img {
     width: 100%;
-    height: 60%;
+    height: 55%;
     object-fit: cover;
+  }
+}
+
+.contentStyles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+
+  h2 {
+    padding: 0.3rem 0;
   }
 }

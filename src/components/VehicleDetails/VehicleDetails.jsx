@@ -11,22 +11,27 @@ const VehicleDetails = ({ vehicle, onClose }) => {
           <h2>
             {vehicle.brand} {vehicle.model}
           </h2>
-          <p>
-            <strong>Año:</strong> {vehicle.year}
-          </p>
-          <p>
-            <strong>Kilometraje:</strong> {vehicle.km.toLocaleString()}
-          </p>
-          <p>
-            <strong>Combustible:</strong> {vehicle.fuelType}
-          </p>
-          <p>
-            <strong>Transmisión:</strong> {vehicle.transmission}
-          </p>
-          <p>
-            <strong>Precio:</strong> ${vehicle.price.toLocaleString('es-CO')}
-          </p>
-          <button onClick={onClose}>Cerrar</button>
+          <div className={styles.alignContentLeft}>
+            <p>
+              <strong>Año:</strong> {vehicle.year}
+            </p>
+            <p>
+              <strong>Kilometraje:</strong> {vehicle.km.toLocaleString()}
+            </p>
+            <p>
+              <strong>Combustible:</strong> {vehicle.fuelType}
+            </p>
+            <p>
+              <strong>Transmisión:</strong> {vehicle.transmission}
+            </p>
+            <p>
+              <strong>Precio:</strong> ${vehicle.price.toLocaleString('es-CO')}
+            </p>
+            <p>
+              <strong>Color:</strong> {vehicle.color}
+            </p>
+            {/* <button onClick={onClose}>Cerrar</button> */}
+          </div>
         </div>
       </div>
     </div>
