@@ -20,7 +20,7 @@ const NavBar = () => {
             </li>
 
             <li>
-              <Link className={styles.item} to="/SellVehicles">
+              <Link className={styles.item} to="/SellVehicle">
                 Vende tu vehiculo
               </Link>
             </li>

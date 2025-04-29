@@ -3,7 +3,7 @@ import styles from "./SearchBar.module.scss";
 
 import clsx from "clsx";
 
-function SearchBar({ brands, years, fuelType, priceRanges, filters, aplyFilter, resetFilters }) {
+function SearchBar({ brands, years, fuelType, priceRanges, filters, applyFilter, resetFilters }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Datos de búsqueda:", filters);
@@ -19,7 +19,7 @@ function SearchBar({ brands, years, fuelType, priceRanges, filters, aplyFilter, 
               className={clsx(styles.vehicleInput, styles.width30)}
               name="brand"
               value={filters.brand}
-              onChange={aplyFilter}
+              onChange={applyFilter}
             >
               <option value="" disabled hidden>
                 Marca
@@ -35,7 +35,7 @@ function SearchBar({ brands, years, fuelType, priceRanges, filters, aplyFilter, 
               type="number"
               name="year"
               value={filters.year}
-              onChange={aplyFilter}
+              onChange={applyFilter}
             >
               <option value="" disabled hidden>
                 Año
@@ -50,7 +50,7 @@ function SearchBar({ brands, years, fuelType, priceRanges, filters, aplyFilter, 
               className={clsx(styles.vehicleInput, styles.widthRemaining)}
               name="fuelType"
               value={filters.fuelType}
-              onChange={aplyFilter}
+              onChange={applyFilter}
             >
               <option value="" disabled hidden>
                 Tipo
@@ -68,7 +68,7 @@ function SearchBar({ brands, years, fuelType, priceRanges, filters, aplyFilter, 
               className={clsx(styles.vehicleInput, styles.widthRemaining)}
               name="priceRangeIndex"
               value={filters.priceRangeIndex}
-              onChange={aplyFilter}
+              onChange={applyFilter}
             >
               <option value="" disabled hidden>
                 Precio

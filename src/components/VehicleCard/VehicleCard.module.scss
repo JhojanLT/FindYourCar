@@ -5,7 +5,7 @@ $price-color: #e74c3c;
 
 // Tarjeta principal
 .vehicleCard {
-  width: 280px;
+  width: 50%;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -84,4 +84,8 @@ $price-color: #e74c3c;
       flex: 2;
     }
   }
-}
+
+  @media (min-width: 1024px) {
+    width: 20%;
+  }
+} // <-- Este es el corchete de cierre final para .vehicleCard
