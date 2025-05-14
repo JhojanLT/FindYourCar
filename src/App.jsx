@@ -4,13 +4,15 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { Home } from "./components/Home/Home";
 import SellVehicle from "./components/SellVehicle/SellVehicle";
 import ContactForm from "./components/ContactForm/ContactForm";
+import Login from "./components/Login/Login";
 
 const App = () => {
   return (
     <Router>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/SellVehicle" element={<SellVehicle />} />
         <Route path="/Contact" element={<ContactForm />} />
       </Routes>
