@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className={styles.navBarFather}>
-      <Link to="/">
+      <Link to="/Home">
         <img src={FindCarLogo} alt="Logo FindYourCar" />
       </Link>
 
@@ -14,7 +14,7 @@ const NavBar = () => {
         <nav>
           <ul>
             <li>
-              <Link className={styles.item} to="/">
+              <Link className={styles.item} to="/Home">
                 Inicio
               </Link>
             </li>

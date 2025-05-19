@@ -1,6 +1,6 @@
 //import React, { useState } from "react";
 import styles from "./SearchBar.module.scss";
-
+import { Button } from "../Button/Button";
 import clsx from "clsx";
 
 function SearchBar({ brands, years, fuelType, priceRanges, filters, applyFilter, resetFilters }) {
@@ -79,13 +79,20 @@ function SearchBar({ brands, years, fuelType, priceRanges, filters, applyFilter,
                 </option>
               ))}
             </select>
-            <button
+            <Button
+              children={"Limpiar"}
+              variant="btnTerciary"
+              onClick={resetFilters}
+              className={clsx(styles.vehicleInput, styles.width30, styles.vehicleButton)}
+            />
+
+            {/* <button
               className={clsx(styles.vehicleInput, styles.width30, styles.vehicleButton)}
               onClick={resetFilters}
               type="button"
             >
               Limpiar
-            </button>
+            </button> */}
           </div>
         </form>
       </div>

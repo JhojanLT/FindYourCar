@@ -26,6 +26,15 @@
   }
 }
 
+.btnTerciary {
+  background-color: #383838;
+  color: #fff;
+  &:hover {
+    background-color: #fff;
+    color: #383838;
+  }
+}
+
 .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;

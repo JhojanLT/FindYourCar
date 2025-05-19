@@ -2,7 +2,6 @@
 $background-dark: #383838;
 $border-radius: 5px;
 $input-height: 40px;
-$spacing: 5px;
 $padding-container: 5rem;
 $margin-title: 3rem;
 $form-width: 70%;
@@ -38,9 +37,9 @@ $form-width-mobile: 90%;
     border: none;
     background-color: $background-dark;
     border-radius: $border-radius;
-    height: $input-height;
-    margin: $spacing;
-    padding: 0 $spacing;
+    min-height: $input-height;
+    margin: 5px;
+    padding: 0 5px;
 
     // Asegura que select sea estilizable
     &[type="submit"],
@@ -69,11 +68,12 @@ $form-width-mobile: 90%;
   // Estilos para el botón
   .vehicleButton {
     cursor: pointer;
-    border: 1px solid transparent;
-    transition: border 0.5s ease-in-out;
+    background-color: #383838;
+    transition: background-color 0.5s ease;
 
     &:hover {
-      border: 1px solid white;
+      color: $background-dark;
+      background-color: white;
     }
   }
 
@@ -83,6 +83,7 @@ $form-width-mobile: 90%;
 
     .vehicleGroup {
       flex-direction: column;
+      margin: 5px;
     }
   }
 }
