@@ -3,7 +3,7 @@ import { useState } from "react";
 import { VehicleCard } from "./../VehicleCard/VehicleCard";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { sampleVehicles } from "../../data/cars";
-import { VehicleDetails } from "../VehicleDetails/VehicleDetails";
+import { VehicleModalDetails } from "../VehicleModalDetails/VehicleModalDetails";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.scss";
 
@@ -105,7 +105,7 @@ function Home() {
       <div className={styles.heroContainer}>
         <h1>Encuentra tu coche Ideal</h1>
         <div className={styles.subtitleContainer}>
-          <p>Vehículos de calidad al mejor precio</p>
+          <p>Vehículos de calidad al mejor precio </p>
         </div>
       </div>
 
@@ -131,7 +131,7 @@ function Home() {
       {filteredVehicles.length === 0 && <p>No hay vehículos que coincidan con los filtros.</p>}
 
       {/* Modal de detalles - se muestra solo cuando hay un vehículo seleccionado */}
-      {selectedVehicle && <VehicleDetails vehicle={selectedVehicle} onClose={handleClose} onclick={buyButton} />}
+      {selectedVehicle && <VehicleModalDetails vehicle={selectedVehicle} onClose={handleClose} onclick={buyButton} />}
     </div>
   );
 }
