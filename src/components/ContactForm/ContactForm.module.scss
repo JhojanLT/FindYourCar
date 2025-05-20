@@ -16,7 +16,8 @@ $spacing: 10px;
 
 .contactContainerForm {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 70%;
 
   @media (max-width: 768px) {
