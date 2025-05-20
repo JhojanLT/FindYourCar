@@ -1,5 +1,5 @@
 // Variables
-$modal-bg-color: rgba(0, 0, 0, 0.5);
+$modal-bg-color: rgba(0, 0, 0, 0.2);
 $modal-content-bg: white;
 
 // Modal
@@ -15,6 +15,7 @@ $modal-content-bg: white;
   z-index: 1000;
   padding: 1rem;
   background-color: $modal-bg-color;
+  backdrop-filter: blur(8px);
   animation: fadeBackGround 0.5s ease-in-out;
 
   // Contenido del modal
@@ -107,8 +108,10 @@ $modal-content-bg: white;
 @keyframes fadeBackGround {
   from {
     background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
   }
   to {
     background-color: $modal-bg-color;
+    backdrop-filter: blur(8px);
   }
 }

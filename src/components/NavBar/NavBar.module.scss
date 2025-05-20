@@ -51,7 +51,7 @@ ul li {
 }
 /*::after es un pseudoelemento que permite agregar contenido sin modificar el HTML*/
 .item::after {
-  content: ""; /*Este estilo es obligatorio para el uso de ::after*/
+  content: ''; /*Este estilo es obligatorio para el uso de ::after*/
   position: absolute;
   left: 0;
   bottom: -2px; /*Posiciona 2px por debajo del borde del item, en este caso el botón*/
