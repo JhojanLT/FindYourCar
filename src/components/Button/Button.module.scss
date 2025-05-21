@@ -27,11 +27,20 @@
 }
 
 .btnTerciary {
-  background-color: #383838;
+  background-color: #2c2c2c;
   color: #fff;
   &:hover {
     background-color: #fff;
     color: #383838;
+  }
+}
+
+.btnCuarto {
+  background-color: #fff;
+  color: #383838;
+  &:hover {
+    background-color: #383838;
+    color: #fff;
   }
 }
 

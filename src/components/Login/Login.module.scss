@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: #1e1e1e;
 }
 
@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #1e1e1e;
+  padding: 1rem; // importante para pantallas pequeñas
 }
 
 .loginBox {
@@ -17,13 +18,15 @@ body {
   padding: 2rem 7rem;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  width: 40%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 500px;
   color: white;
+  box-sizing: border-box;
 
   h2 {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 1.8rem;
   }
 
   label {
@@ -81,4 +84,29 @@ body {
   padding: 0.5rem 2rem;
   color: gray;
   border-radius: 5px;
+}
+
+/* 🔁 RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .loginBox {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginBox {
+    padding: 2rem;
+  }
+
+  .loginBox h2 {
+    font-size: 1.5rem;
+  }
+
+  .registerLink {
+    font-size: 13px;
+  }
+
+  .loginBox button {
+    font-size: 15px;
+  }
 }
