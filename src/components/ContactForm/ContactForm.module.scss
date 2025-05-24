@@ -17,6 +17,15 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.migajero {
+  padding: 2rem;
+  .link {
+    padding: 0 0.5rem;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
 .headerInfo {
   grid-column: 1 / -1;
 }
