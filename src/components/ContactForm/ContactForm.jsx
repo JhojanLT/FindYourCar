@@ -38,18 +38,18 @@ function ContactForm() {
             <li>
               <MdEmail className={styles.icon} />
               <a className={styles.contactLink} href="mailto:contacto@wcar.co">
-                contacto@wcar.co
+                http://www.unilibre.edu.co/
               </a>
             </li>
             <li>
               <MdPhone className={styles.icon} />
               <a className={styles.contactLink} href="tel:+57324400212">
-                +57 324 4001212
+                6013821000
               </a>
             </li>
             <li>
               <MdLocationOn className={styles.icon} />
-              Calle 98a # 69B-35
+              Cl. 8 #580, Bogotá
             </li>
           </ul>
         </address>
